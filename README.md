@@ -1,5 +1,7 @@
 # 1983again
 
+An animation project
+
 This program will draw random points in random places in sequential order within a defined area. As the points are being placed, start to connect them with a line, going in order of how they were drawn, and keep the lines visible until the program draws the specified number of points. Once it reaches the end, it will do the whole thing backwards and erase everything.  That's the animation.
 
 I'm doing this project because I am currently learning CSS animation and (re)learning JavaScript and thought this would be a meaningful and fun one to do. The thing still has a lot of meaning for me, and re-doing it today feels like it will be a great full circle and yet a begninning. 
