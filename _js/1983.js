@@ -5,10 +5,6 @@
 let x;
 let y;
 
-const points = [x, y];
-
-console.log(x, y, points);
-
 //Set boundaries of the canvas
 
 const length = 200;
@@ -35,8 +31,16 @@ y = Math.floor(Math.random() * 200 + 1)
 
 console.log(x, y);
 
-//assign random number for y
-//log to array
+//log point pairs to drawing array
+
+let point = [x, y];
+
+console.log(x, y, point, typeof point);
+
+let drawing = [point];
+
+console.log(drawing, typeof drawing);
+
 //plot as point
 //if there is a prior point, then connect this new point and the prior point with a line, otherwise skip
 //QUESTION do we log the lines into the db also?
