@@ -1,22 +1,18 @@
 //SOLUTION 1:  CANVAS and ARRAYS
 
-//Initialize the array (array of x and y values)
-
-let x;
-let y;
-
 //Set boundaries of the canvas
-
 const length = 200;
 const width = 200;
 
-console.log(length, width);
-
-//Decide how many points (fixed number for now) and display this
-
+//Decide how many points to draw (fixed number for now) and display this
 const totalPoints = 10;
 
-console.log(totalPoints);
+//set up x and y values and the two arrays
+
+let x;
+let y;
+let points = [];
+let drawing = [];
 
 //Add a button to start the process
 
@@ -24,22 +20,22 @@ console.log(totalPoints);
 
 //Loop through this for as many points as you want, keeping in mind that a line will be drawn between the two
 
-//assign random number for x and y betweeen 1 and 200
+for (let i = 0; i < totalPoints; i++) {
+  console.log(i);
 
-x = Math.floor(Math.random() * 200 + 1)
-y = Math.floor(Math.random() * 200 + 1)
+  //assign random number for x and y betweeen 1 and 200 (box dimensions)
 
-console.log(x, y);
+  x = Math.floor(Math.random() * 200 + 1);
+  y = Math.floor(Math.random() * 200 + 1);
+  console.log(x, y);
+  
+  //log point pairs to drawing array
 
-//log point pairs to drawing array
-
-let point = [x, y];
-
-console.log(x, y, point, typeof point);
-
-let drawing = [point];
-
-console.log(drawing, typeof drawing);
+  points = [x,y];
+  console.log(points);
+  drawing.push(points);
+  console.log(drawing);
+} 
 
 //plot as point
 //if there is a prior point, then connect this new point and the prior point with a line, otherwise skip
