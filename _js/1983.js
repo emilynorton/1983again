@@ -14,6 +14,23 @@ let y;
 let points = [];
 let drawing = [];
 
+//set up the drawing function
+//find the canvas
+//start and first point and then draw to second point
+
+function draw() {
+  const canvas = document.getElementById("board");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.arc(100, 75, 4, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.fill(); 
+  }
+}
+
+
 //Add a button to start the process
 
 //On button click
@@ -35,9 +52,17 @@ for (let i = 0; i < totalPoints; i++) {
   console.log(points);
   drawing.push(points);
   console.log(drawing);
+
 } 
 
-//plot as point
+//draw the initial set of lines
+
+draw ();
+
+
+//reverse the array and then "erase"
+
+
 //if there is a prior point, then connect this new point and the prior point with a line, otherwise skip
 //QUESTION do we log the lines into the db also?
 
